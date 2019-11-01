@@ -1,20 +1,28 @@
 {
   "name": "react-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test"
+  },
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.13",
+    "@rescripts/rescript-use-babel-config": "^0.0.9",
+    "@rescripts/rescript-use-eslint-config": "^0.0.10",
+    "@rescripts/rescript-use-rewire": "^0.0.5",
+    "babel-plugin-jsx-imports": "^1.0.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-react-require": "^3.1.1",
+    "react-app-rewire-compression-plugin": "^1.0.0",
+    "react-app-rewire-css-modules-extensionless": "^1.2.0",
+    "rescript-use-babel-jest-config": "^1.0.0"
   },
   "browserslist": {
     "production": [

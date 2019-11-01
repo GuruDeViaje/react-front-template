@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* @ is alias to ./src/img */
+import logo from '@/png/guru.png';
+import styles from './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className={styles.main}>
+      <header className={styles.header}>
+        <h3>
+          Guru Boilerplate
+        </h3>
+        <img src={logo} className={styles.logo} alt="logo" />
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className={styles.link}
+          href="https://github.com/GuruDeViaje"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Guru Github page
         </a>
       </header>
-    </div>
+    </div >
   );
 }
 
