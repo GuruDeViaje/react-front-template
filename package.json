@@ -5,7 +5,8 @@
   "scripts": {
     "start": "rescripts start",
     "build": "rescripts build",
-    "test": "rescripts test"
+    "test": "rescripts test",
+    "lint": "eslint --ext .jsx,.js src --fix"
   },
   "dependencies": {
     "react": "^16.11.0",
@@ -20,6 +21,11 @@
     "babel-plugin-jsx-imports": "^1.0.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-react-require": "^3.1.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
     "react-app-rewire-compression-plugin": "^1.0.0",
     "react-app-rewire-css-modules-extensionless": "^1.2.0",
     "rescript-use-babel-jest-config": "^1.0.0"
@@ -35,5 +41,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

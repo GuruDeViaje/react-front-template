@@ -1,5 +1,6 @@
 module.exports = {
-  presets: ['react-app'],
+  presets: ["@babel/preset-env", "@babel/react"],
+
   plugins: [
     'react-require',
     [
@@ -7,8 +8,10 @@ module.exports = {
       {
         root: '.',
         alias: {
-          '~': './src',
-          '@': './src/img',
+          '@': './src',
+          'img': './src/img',
+          'utils': './src/utils',
+          'components': './src/components',
         },
       },
     ],

@@ -1,6 +1,6 @@
 import React from 'react';
-/* @ is alias to ./src/img */
-import logo from '@/png/guru.png';
+/* img is alias to ./src/img */
+import logo from 'img/png/guru.png';
 import styles from './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           Guru Github page
         </a>
       </header>
-    </div >
+    </div>
   );
 }
 
